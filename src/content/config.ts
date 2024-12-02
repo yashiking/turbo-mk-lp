@@ -14,3 +14,8 @@ const showcase = defineCollection({
 export const collections = {
   showcase,
 };
+
+export enum Platform {
+  iOS = 'iOS',
+  Android = 'Android',
+}

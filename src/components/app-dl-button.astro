@@ -1,0 +1,24 @@
+---
+import { Platform } from "../content/config";
+export interface Props {
+  platform: Platform;
+}
+const { platform } = Astro.props
+const iosLink = 'https://apps.apple.com/jp/app/turbomk-for-マリオカート/id6501999098'
+const androidLink = 'https://play.google.com/store/apps/details?id=com.turbo_mk.app'
+---
+{platform === Platform.iOS ? (
+  <a
+    href={iosLink}
+    target="_blank"
+  >
+    <img class="h-full" src="/src/assets/dl-ios.png">
+  </a>
+) : (
+  <a
+    href={androidLink}
+    target="_blank"
+  >
+    <img class="h-full" src="/src/assets/dl-android.png">
+  </a>
+)}
