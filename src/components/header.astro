@@ -6,16 +6,18 @@ import AppDlButton from "~/components/app-dl-button.astro";
 
 <header
   id="page-header"
-  class="fixed top-10 z-20 flex w-full h-20 container items-center justify-between px-4 py-4 bg-white rounded-2xl text-black text-opacity-80"
+  class="fixed top-10 z-20 w-full"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <AppIcon
-      size="64"
-    />
-    <h1 class="text-2xl">TurboMK</h1>
-  </a>
-  <div class="flex gap-4 h-full">
-    <AppDlButton platform={Platform.iOS}></AppDlButton>
-    <AppDlButton platform={Platform.Android}></AppDlButton>
+  <div class="flex w-full container h-20 items-center justify-between mx-auto px-4 py-4 bg-white rounded-2xl text-black text-opacity-80">
+    <a class="flex items-center gap-3 hover:!text-default" href="#">
+      <AppIcon
+        size="64"
+      />
+      <h1 class="text-2xl">TurboMK</h1>
+    </a>
+    <div class="flex gap-4 h-full">
+      <AppDlButton platform={Platform.iOS}></AppDlButton>
+      <AppDlButton platform={Platform.Android}></AppDlButton>
+    </div>
   </div>
 </header>
