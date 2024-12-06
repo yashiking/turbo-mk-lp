@@ -2,8 +2,9 @@
 import { Platform } from "../content/config";
 export interface Props {
   platform: Platform;
+  class?: string;
 }
-const { platform } = Astro.props
+const { platform, class: className } = Astro.props
 const iosLink = 'https://apps.apple.com/jp/app/turbomk-for-マリオカート/id6501999098'
 const androidLink = 'https://play.google.com/store/apps/details?id=com.turbo_mk.app'
 ---
@@ -11,6 +12,7 @@ const androidLink = 'https://play.google.com/store/apps/details?id=com.turbo_mk.
   <a
     href={iosLink}
     target="_blank"
+    class={className}
   >
     <img class="h-full w-auto" src="/src/assets/dl-ios.png">
   </a>
@@ -18,6 +20,7 @@ const androidLink = 'https://play.google.com/store/apps/details?id=com.turbo_mk.
   <a
     href={androidLink}
     target="_blank"
+    class={className}
   >
     <img class="h-full w-auto" src="/src/assets/dl-android.png">
   </a>

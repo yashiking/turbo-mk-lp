@@ -33,18 +33,14 @@ const features: Array<FeatureItem> = [
 
 <div>
   {features.map((item) => (
-  <div class="w-full h-lvh flex flex-row-r everse">
-    <div class="feature-body w-1/2 py-20 flex flex-col justify-center items-center">
+  <div class="w-full lg:h-lvh flex lg:flex-row flex-col">
+    <div class="feature-body bg-white lg:w-1/2 w-full lg:py-20 pt-20 pb-10 flex flex-col justify-center items-center">
       <h3 set:html={item.title} class="feature-title" />
-      <!--<div class="h-2/3 px-8">-->
-      <!--  -->
-      <!--  &lt;!&ndash;<p class="mt-10" set:html={item.description} />&ndash;&gt;-->
-      <!--</div>-->
     </div>
-    <figure class="feature-figure flex-shrink w-1/2 flex justify-center items-center">
+    <figure class="feature-figure flex-shrink lg:w-1/2 py-10 lg:p-0 w-full flex justify-center items-center">
       <img
         src={item.imageUrl}
-        class="feature-image h-2/3 mt-20"
+        class="feature-image lg:h-2/3 h-auto lg:w-auto w-1/2 lg:mt-20"
         alt={`A screenshot of ${item.title}`}
       />
     </figure>
@@ -55,12 +51,20 @@ const features: Array<FeatureItem> = [
 <style lang="sass">
   .feature-body
     min-width: 600px
+
+    @media (max-width: 760px)
+      min-width: unset
     
   .feature-title
     font-size: 2rem
     line-height: 2
     text-align: center
     
+    @media (max-width: 760px)
+      font-size: 1.25rem
+      line-height: 1.5
+
+
   .feature-figure
     background: #465EFF
 </style>

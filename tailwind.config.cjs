@@ -22,6 +22,10 @@ module.exports = {
       borderColor: {
         default: "var(--color-border)",
       },
+      screens: {
+        'lg': '960px',
+        // 他のブレイクポイントも必要に応じて設定
+      },
     },
   },
   corePlugins: {

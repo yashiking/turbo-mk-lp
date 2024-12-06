@@ -4,8 +4,9 @@ import AppIcon from "./app-icon.astro";
 import AppDlButton from "./app-dl-button.astro";
 ---
 
-<div class="flex justify-center py-20">
-  <div class="card">
+<div class="flex flex-col justify-center items-center lg:h-4/5 px-2 lg:py-2 py-20">
+  <p class="lg:text-5xl text-xl w-full text-center">TurboMKと一緒につよくなろう！</p>
+  <div class="card mt-10">
     <img class="card-image" src="/src/assets/cta.png">
     <div class="card-main backdrop-blur-sm bg-white/60 px-10 w-2/5 flex flex-col justify-center z-10">
       <div class="flex justify-start items-center gap-4">
@@ -45,7 +46,7 @@ import AppDlButton from "./app-dl-button.astro";
       z-index: 0
 
     @media (max-width: 960px)
-      height: 240px
+      height: auto
 
       .card-image
         position: absolute
@@ -57,10 +58,14 @@ import AppDlButton from "./app-dl-button.astro";
 
       .card-main
         width: 100%
-        padding: 20px
+        padding: 16px 8px
         display: flex
         flex-direction: column
         justify-content: center
+        align-items: center
         gap: 20px
         z-index: 1
+        
+        > div
+          width: 320px
 </style>
