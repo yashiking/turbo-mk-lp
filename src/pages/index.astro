@@ -34,7 +34,7 @@ const description =
   <meta property="og:url" content={site}/>
   <meta name="twitter:card" content="summary_large_image"/>
 
-  <style>
+  <style is:global>
     @font-face {
       font-family: 'Rounded Mplus 1c';
       src: url('/fonts/MPLUSRounded1c-ExtraBold.woff2') format('woff2');
@@ -55,6 +55,7 @@ const description =
       font-family: 'Rounded Mplus 1c', sans-serif;
       font-weight: bold;
       box-sizing: border-box;
+      --color-background: white;
     }
 
     .container {
@@ -63,13 +64,18 @@ const description =
         max-width: 1024px;
       }
     }
+    
+    .motya {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.17);
+    }
   </style>
 </head>
 <body
-  class="relative w-full h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+  class="relative w-full h-full overflow-x-hidden bg-default text-black text-opacity-90 text-base selection:bg-secondary selection:text-white"
 >
 <Header/>
 <Intro/>
+<div class="motya ma-10"><p>hogehoge</p></div>
 <Features/>
 <Compatibility/>
 <Showcase/>

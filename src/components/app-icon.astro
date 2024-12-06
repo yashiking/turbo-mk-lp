@@ -1,13 +1,14 @@
 ---
 export interface Props {
   size: number;
+  class?: string;
 }
-const { size } = Astro.props
+const { size, class: className } = Astro.props
 ---
 
 <img
   src="/src/assets/app_icon.png"
-  class="rounded"
+  class={className}
   width={size}
   height={size}
   alt="TurboMK icon"

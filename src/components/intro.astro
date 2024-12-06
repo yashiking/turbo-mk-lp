@@ -1,8 +1,70 @@
 ---
-import { Icon } from "astro-icon/components";
-import ContentSection from "~/components/content-section.astro";
+import AppIcon from './app-icon.astro'
+import AppDlButton from './app-dl-button.astro'
+import {Platform} from "../content/config";
 ---
 
-<div class="w-full bg-white h-lvh">
-  
+<div class="hero w-full bg-white h-lvh flex items-center justify-center">
+  <div class="hero-main flex flex-col gap-10 justify-between w-5/6">
+    <div class="flex flex-col justify-around w-3/5">
+      <h2 class="text-5xl leading-8">マリオカート8DXを<br>もっと楽しもう！</h2>
+      <p class="mt-8">スマホで手軽に記録を入力できる、<br>
+        マリオカート8DX好きのための戦績管理アプリ</p>
+    </div>
+    <div class="card backdrop-blur-sm bg-white/30 sample-tarou p-10 flex flex-col gap-6 items-center justify-around">
+      <div class="flex justify-start items-center gap-4 w-full">
+        <AppIcon class="shrink-0 grow-0" size="120"/>
+        <div class="my-shadow">
+          <h1 class="text-3xl">TurboMK</h1>
+          <p class="text- sm">for マリオカート</p>
+          <p class="text- sm font-normal">無料でダウンロード！</p>
+        </div>
+      </div>
+      <div class="flex justify-between h-16 w-full">
+        <AppDlButton platform={Platform.iOS}/>
+        <AppDlButton platform={Platform.Android}/>
+      </div>
+    </div>
+  </div>
 </div>
+
+<style lang="sass">
+  .hero
+    background-image: url("/src/assets/bg_main.jpg")
+    background-size: cover
+
+
+    &::before, &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+    &::before
+      background-color: rgba(255, 255, 255, 0.4)
+
+    &::after
+      background-image: url("/src/assets/hero_pc.png")
+      background-size: 130%
+      background-position-x: -16vw
+      background-position-y: -20vh
+
+      @media (max-width: 760px)
+        background-image: url("/src/assets/hero_sp.png")
+        background-size: 180%
+        background-position-x: -40vw
+        background-position-y: -30vh
+
+
+  .hero-main
+    z-index: 1
+
+
+  .card
+    width: 480px
+    border-radius: 16px
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.17)*/
+
+</style>

@@ -8,7 +8,7 @@ import AppDlButton from "~/components/app-dl-button.astro";
   id="page-header"
   class="fixed top-10 z-20 w-full"
 >
-  <div class="flex w-full container h-20 items-center justify-between mx-auto px-4 py-4 bg-white rounded-2xl text-black text-opacity-80">
+  <div class="header backdrop-blur-sm bg-white/30 flex w-full h-20 items-center justify-between mx-auto px-8 py-4 bg-white rounded-2xl text-black text-opacity-80">
     <a class="flex items-center gap-3 hover:!text-default" href="#">
       <AppIcon
         size="64"
@@ -21,3 +21,9 @@ import AppDlButton from "~/components/app-dl-button.astro";
     </div>
   </div>
 </header>
+
+<style lang="sass">
+  .header
+    width: 90vw
+    height: 80px
+</style>
