@@ -33,7 +33,6 @@ import {Platform} from "../content/config";
     background-image: url("/src/assets/bg_main.jpg")
     background-size: cover
 
-
     &::before, &::after
       content: ""
       position: absolute
@@ -47,9 +46,10 @@ import {Platform} from "../content/config";
 
     &::after
       background-image: url("/src/assets/hero_pc.png")
-      background-size: 130%
-      background-position-x: -16vw
-      background-position-y: -20vh
+      background-size: auto 120vh
+      background-repeat: no-repeat
+      background-position-x: -20vw
+      background-position-y: -10vh
 
       @media (max-width: 760px)
         background-image: url("/src/assets/hero_sp.png")
