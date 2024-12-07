@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import appleDlButton from '~/assets/dl-ios.png'
+import androidDlButton from '~/assets/dl-android.png'
 import { Platform } from "../content/config";
 export interface Props {
   platform: Platform;
@@ -14,7 +17,7 @@ const androidLink = 'https://play.google.com/store/apps/details?id=com.turbo_mk.
     target="_blank"
     class={className}
   >
-    <img class="h-full w-auto" src="/src/assets/dl-ios.png">
+    <Image class="h-full w-auto" alt="iosアプリダウンロードボタンの画像" src={appleDlButton} />
   </a>
 ) : (
   <a
@@ -22,6 +25,6 @@ const androidLink = 'https://play.google.com/store/apps/details?id=com.turbo_mk.
     target="_blank"
     class={className}
   >
-    <img class="h-full w-auto" src="/src/assets/dl-android.png">
+    <Image class="h-full w-auto" alt="androidアプリダウンロードボタンの画像" src={androidDlButton} />
   </a>
 )}

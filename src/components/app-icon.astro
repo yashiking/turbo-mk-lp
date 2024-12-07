@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import appIcon from '~/assets/app_icon.png'
 export interface Props {
   size?: number;
   class?: string;
@@ -6,8 +8,8 @@ export interface Props {
 const { size, class: className } = Astro.props
 ---
 
-<img
-  src="/src/assets/app_icon.png"
+<Image
+  src={appIcon}
   class={className}
   width={size}
   height={size}

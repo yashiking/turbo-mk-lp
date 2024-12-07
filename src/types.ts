@@ -6,7 +6,7 @@ export interface CompatibilityItem {
 
 export interface FeatureItem {
   description: string;
-  imageUrl: string;
+  imageUrl: any;
   title: string;
 }
 

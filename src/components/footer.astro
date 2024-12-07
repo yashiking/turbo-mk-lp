@@ -1,9 +1,11 @@
 ---
+import { Image } from "astro:assets";
+import xIcon from '/src/assets/x.png'
 ---
 
 <footer class="relative flex flex-col gap-6 h-64 py-10 items-center justify-center">
   <a class="contact flex items-center px-4 py-2 h-20 gap-2 bg-white rounded-2xl" href="https://x.com/app_TurboMK">
-    <img class="h-full w-auto" src="/src/assets/x.png" alt="Xのアカウントにアクセス">
+    <Image class="h-full w-auto" src={xIcon} alt="Xのアカウントにアクセス" />
     <span>開発者に連絡</span>
   </a>
   <div>

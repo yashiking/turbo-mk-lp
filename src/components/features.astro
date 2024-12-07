@@ -1,32 +1,37 @@
 ---
 import { Image } from "astro:assets";
+import imgItemMap from 'src/assets/features/item_map.png'
+import imgLounge12Race from 'src/assets/features/lounge_12_race.png'
+import imgOnlineNora from 'src/assets/features/online_nora.png'
+import imgTaOrderByTime from 'src/assets/features/ta_order_by_time.png'
+import imgWrVideo from 'src/assets/features/wr_video.png'
 import type {FeatureItem} from "~/types";
 
 const features: Array<FeatureItem> = [
   {
     title: 'リピック対策にもなる！<br>12レースのレース結果を一気に登録',
     description: 'ラウンジ登録画面では、12レースの順位を登録することができます。<br>', 
-    imageUrl: '/src/assets/features/lounge_12_race.png'
+    imageUrl: imgLounge12Race
   },
   {
     title: '打開でどこまで下がるかわかる！<br>アイテムマップ表示',
     description: '', 
-    imageUrl: '/src/assets/features/item_map.png'
+    imageUrl: imgItemMap
   },
   {
     title: '3落ちはどのコース？<br>すぐわかるタイムアタック記録一覧！',
     description: '',
-    imageUrl: '/src/assets/features/ta_order_by_time.png'
+    imageUrl: imgTaOrderByTime
   },
   {
     title: '最新のWR動画をみながら走れる！<br>毎日WR情報を更新',
     description: '', 
-    imageUrl: '/src/assets/features/wr_video.png'
+    imageUrl: imgWrVideo
   },
   {
     title: 'VRの変動グラフが楽しい！<br>野良レース結果も登録可能',
     description: '', 
-    imageUrl: '/src/assets/features/online_nora.png'
+    imageUrl: imgOnlineNora
   },
 ]
 ---
@@ -38,7 +43,7 @@ const features: Array<FeatureItem> = [
       <h3 set:html={item.title} class="feature-title" />
     </div>
     <figure class="feature-figure flex-shrink lg:w-1/2 py-10 lg:p-0 w-full flex justify-center items-center">
-      <img
+      <Image
         src={item.imageUrl}
         class="feature-image lg:h-2/3 h-auto lg:w-auto w-1/2 lg:mt-20"
         alt={`A screenshot of ${item.title}`}
